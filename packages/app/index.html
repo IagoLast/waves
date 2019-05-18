@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waves</title>
+    <style>
+        :root {
+            --blue: #71a9d0;
+            --green: #71b745;
+            --orange: #ff9800;
+            --red: #E91E63;
+            --sand: #f7f1d5;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 300;
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-content: space-between;
+            flex-direction: column;
+        }
+
+        header {
+            background: var(--blue);
+            color: white;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .forecast {
+            margin: 24px auto;
+            position: relative;
+        }
+
+        .forecast .circle {
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            border: 6px solid var(--blue);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(315deg, var(--blue) 15%, var(--sand) 80%);
+            flex-direction: column;
+        }
+
+        .forecast .circle h1 {
+            color: #333;
+        }
+
+        #wind-img,
+        #swell-img {
+            position: relative;
+        }
+
+        #wind-img {
+            height: 70px;
+            transform: rotate(45deg);
+            left: -3px;
+            top: 4px;
+            fill: var(--green);
+        }
+
+        #swell-img {
+            transform: rotate(90deg);
+            height: 30px;
+            fill: var(--red);
+            position: relative;
+            left: -34px;
+        }
+
+        .wind,
+        .swell {
+            position: absolute;
+            transform-origin: center center;
+            width: 100%;
+        }
+
+
+        .wind {
+            transform: rotate(30deg);
+        }
+
+        .swell {
+            transform: rotate(200deg);
+        }
+
+        .info {
+            margin: auto;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .info p {
+            display: flex;
+            align-items: center;
+            font-weight: 100;
+            margin: 4px 0;
+        }
+
+        .info img {
+            height: 18px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>WAVES</h2>
+    </header>
+    <main>
+        <section>
+            <h3>
+                La Barceloneta
+            </h3>
+        </section>
+
+        <section class="forecast">
+            <div class="circle">
+                <span class="wind">
+                    <svg id="wind-img" version="1.2" viewBox="0 0 24 24" xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path
+                                d="M10.368,19.102c0.349,1.049,1.011,1.086,1.478,0.086l5.309-11.375c0.467-1.002,0.034-1.434-0.967-0.967L4.812,12.154   c-1.001,0.467-0.963,1.129,0.085,1.479L9,15L10.368,19.102z" />
+                        </g>
+                    </svg>
+                </span>
+                <span class="swell">
+                    <svg id="swell-img" version="1.1" viewBox="0 0 26 26" xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <polygon
+                                points="0.046,24.418 2.13,26.502 12.967,15.666 23.803,26.502 25.887,24.418 12.967,11.498  " />
+                            <polygon
+                                points="0.046,13.418 2.13,15.502 12.967,4.666 23.803,15.502 25.887,13.418 12.967,0.498  " />
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </section>
+        <h3> ★★★★☆ </h3>
+        <section class="info">
+            <p>
+                <img src="img/wind.svg" alt="sea">11km/h
+            </p>
+            <p>
+                <img src="img/sea.svg" alt="sea">0.9m
+            </p>
+        </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>

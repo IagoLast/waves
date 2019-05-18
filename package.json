@@ -1,0 +1,22 @@
+{
+  "name": "waves-app",
+  "version": "1.0.0",
+  "description": "Surf forecast",
+  "main": "index.js",
+  "scripts": {
+    "test": "lerna run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IagoLast/waves.git"
+  },
+  "author": "@iagolast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IagoLast/waves/issues"
+  },
+  "homepage": "https://github.com/IagoLast/waves#readme",
+  "dependencies": {
+    "lerna": "^3.14.1"
+  }
+}
